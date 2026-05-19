@@ -28,7 +28,23 @@ Please don't use a css framework.
 Please use the least amount of css tags.
 ```
 
+Below is the image provided to the LLM:
 
 ![](./Docs/Harvard%20Resume%20Template.jpg)
 
 
+
+This is the [generated output](./Docs/19th%20May%202026%20Resume.html) which I will
+tweak.
+
+This is what the generated HTML looks like unaltered:
+
+![](./Docs/19%20may%202025%20resume%20rendered.jpg)
+
+## HTML Adjustments
+
+- We be using the UTF-8 meta charshet as it can support most languages.
+- Will be applying the mobile styling to our website. So we be including the: viewport meta tag =device-width so mobile styling scales normally.
+- We will extract our styles into its own stylesheet after we are happy with our HTML markup.
+- We will simpligy our HTML markup CSS selector to be minimal as possible.
+- 
