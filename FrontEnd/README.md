@@ -47,4 +47,29 @@ This is what the generated HTML looks like unaltered:
 - Will be applying the mobile styling to our website. So we be including the: viewport meta tag =device-width so mobile styling scales normally.
 - We will extract our styles into its own stylesheet after we are happy with our HTML markup.
 - We will simpligy our HTML markup CSS selector to be minimal as possible.
-- 
+
+
+## Serve Static Website Locally
+
+We need to server out static website locally so we can start using stylesheets externally from our HTML page in a CDE.
+
+This is not necessary with local development.
+
+assuming already node install, we use the simple web-server http-server
+
+### Install HTTP Server
+```sh
+npm i http-server-g
+```
+
+https://www.npmjs.com/package/http-server
+
+### Server Website
+
+http-server will server a pulic folder by default.
+the command is run.
+
+```sh
+cd Frontend
+http-server
+```
