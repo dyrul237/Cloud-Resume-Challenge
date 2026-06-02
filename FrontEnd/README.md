@@ -70,6 +70,6 @@ http-server will server a pulic folder by default.
 the command is run.
 
 ```sh
-cd Frontend
+cd FrontEnd
 http-server
 ```
