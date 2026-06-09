@@ -59,7 +59,7 @@ assuming already node install, we use the simple web-server http-server
 
 ### Install HTTP Server
 ```sh
-npm i http-server-g
+npm i http-server -g
 ```
 
 https://www.npmjs.com/package/http-server
