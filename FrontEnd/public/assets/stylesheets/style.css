@@ -29,7 +29,7 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 header{
@@ -74,10 +74,8 @@ article{
     overflow: auto;
     display: flex;
     justify-content: center;
-    align-items:center;
-    /*max-width:1400px;
-    margin:auto;
-    padding:40px;*/
+    align-items:flex-start;
+    padding:40px;
 }
 
 div.content{
@@ -165,4 +163,28 @@ div.intro-section h2{
     grid-template-columns: 2fr 1fr;
     gap:25px;
 }
- 
+
+.architecture{
+    padding:15px 20px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:white;
+    font-weight:600;
+    color:var(--primary); 
+}
+
+.visitor-box{
+    text-align:center;
+    padding:20px;
+}
+
+.visitor-count{
+    font-size: 3rem;
+    color:rgb(37, 99, 235);
+    font-weight:800;
+}
+
+.visitor-label{
+    text-align:center;
+    color:rgb(107, 114, 128);
+}
