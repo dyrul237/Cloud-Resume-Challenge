@@ -73,3 +73,13 @@ the command is run.
 cd FrontEnd
 http-server
 ```
+
+### Image Optimization
+
+Image optimization is needed if you want the backgroud (body) from an image.
+usually an image has a large size. the app that I use for it is call webpn.
+I did try it and optimize it, but the backgroud seem to weird for it. so I left it out. would probably use it when using real image for myself.
+
+https://compress-or-die.com/webp
+
+![Webiste Page](./Docs/Webp.jpg)
