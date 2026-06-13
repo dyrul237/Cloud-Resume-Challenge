@@ -164,11 +164,17 @@ div.intro-section h2{
     border-bottom: 2px solid rgb(15, 39, 72);
 }
 /* Separation between cards */
-.grid {
+.resume-grid {
     display:grid;
     grid-template-columns: 2fr 1fr;
     gap:25px;
     align-items:start;
+}
+.left-column,
+.right-column{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 /* Architecture Card*/
 .architecture{
@@ -268,4 +274,65 @@ div.intro-section h2{
 
 .section-icon{
     margin-bottom:-2px;
+}
+
+/* certification table */
+.cert-table,
+.training-table{
+    display:flex;
+    flex-direction:column;
+}
+
+.cert-row{
+    display:grid;
+    grid-template-columns:36px 1fr 50px;
+    align-items:center;
+    gap:12px;
+    padding:10px 0;
+    border-bottom:1px solid #dbe2ea;
+}
+
+.cert-row:last-child{
+    border-bottom:none;
+}
+
+.cert-row p{
+    font-size:0.9rem;
+    color:var(--text);
+    margin:0;
+    font-weight:500;
+}
+
+.cert-row span{
+    font-size:0.85rem;
+    color:var(--primary);
+    font-weight:700;
+    text-align:right;
+}
+
+/*cert logo*/
+.cert-badge{
+    width:30px;
+    height:30px;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0.65rem;
+    font-weight:800;
+    background:#eef4ff;
+    color:var(--primary);
+}
+
+.cert-logo-icon{
+    font-size:1.5rem;
+    flex-shrink:0;
+}
+
+.gcp-icon{
+    color:#4285f4;
+}
+
+.aws-icon{
+    color:#ff9900;
 }
