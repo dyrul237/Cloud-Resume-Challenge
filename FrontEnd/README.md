@@ -90,3 +90,9 @@ https://compress-or-die.com/webp
 - Chose to use React because its the most popuplat javascript framework.
 - Chose to use Vite.js over wevpack vecause our frontend is very simple.
 - Configured React Router V7, decided to use declaritvve mode because again our app is very simple.
+
+## how to run Vite.js.
+
+cd FrontEnd
+
+npm run dev
