@@ -336,3 +336,12 @@ div.intro-section h2{
 .aws-icon{
     color:#ff9900;
 }
+
+.cert-logo-icon{
+    font-size:1.5rem;
+    flex-shrink:0;
+}
+
+.security-icon{
+    color:#0f2748;
+}

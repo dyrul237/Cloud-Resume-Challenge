@@ -1,17 +1,15 @@
 import React from "react";
 import ProfilePic from "../assets/images/Dyrul.jpg"
 import {
-  FaUser,
-  FaBriefcase,
-  FaGraduationCap,
-  FaCode,
-  FaCertificate,
-  FaFolderOpen,
-  FaProjectDiagram,
-  FaAws,
+  FaUser, FaBriefcase,
+  FaGraduationCap, FaCode,
+  FaCertificate, FaFolderOpen,
+  FaProjectDiagram, FaAws,
+  FaShieldAlt
 } from "react-icons/fa";
 
 import { SiGooglecloud } from "react-icons/si";
+import 'css/default.css'
 
 export default function ResumePage() {
   return (
@@ -47,7 +45,7 @@ export default function ResumePage() {
 
       <div className="Social-Buttons">
         <a href="#">Resume</a>
-        <a href="#">Github</a>
+        <a href="https://github.com/dyrul237" target="_blank" >Github</a>
         <a href="#">Linkedin</a>
       </div>
 
@@ -185,6 +183,11 @@ export default function ResumePage() {
           <p>AWS Certified Cloud Practitioner</p>
           <span>2023</span>
           </div>
+        <div className="cert-row">
+          <FaShieldAlt className="cert-logo-icon security-icon"/>
+          <p>CEH Certified Network Defender</p>
+          <span>2023</span>
+        </div>
         
        </div>
     </section>
