@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {BrowserRouter, Routes, Route} from "react-router"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 import Layout from './Layout.jsx'
 import ResumePage from 'pages/ResumePage'
