@@ -217,3 +217,79 @@ Example:
 
 This makes the resume easier to update because most content changes can be done directly inside ResumeData.js without editing the component layout.
 
+Responsive Styling and PostCSS Setup
+
+To improve mobile responsiveness, I started separating responsive styling concerns from the main desktop CSS.
+
+The goal is to keep the default resume styling focused on the desktop layout, while using media queries to override the layout for smaller screens such as mobile devices.
+
+Why PostCSS Was Added
+
+PostCSS was added to support cleaner and more maintainable CSS features during development.
+
+The main reason for using PostCSS in this project is to support custom media queries for responsive breakpoints.
+
+Instead of repeatedly writing raw media queries such as:
+
+@media (max-width: 767px) {
+}
+
+I can define reusable breakpoint names such as:
+
+@custom-media --phone-only (max-width: 767px);
+@custom-media --tablet-up (min-width: 768px);
+
+Then use them in the main stylesheet:
+
+@media (--phone-only) {
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+This makes the CSS easier to read and maintain as the project grows.
+
+Files Updated
+
+The following files were updated or created:
+
+package.json
+package-lock.json
+postcss.config.js
+src/assets/stylesheets/breakpoints.css
+src/assets/stylesheets/default.css
+Breakpoint Setup
+
+A new breakpoint stylesheet was created to store responsive breakpoint definitions.
+
+Example:
+
+@custom-media --phone-only (max-width: 767px);
+@custom-media --tablet-up (min-width: 768px);
+@custom-media --desktop-up (min-width: 1024px);
+
+The breakpoint file was then imported into the main resume CSS file:
+
+@import "./breakpoints.css";
+
+This allows the main stylesheet to use reusable breakpoint names.
+
+Issue Faced
+
+While setting up PostCSS, I encountered this error:
+
+PostCSS Plugin failed: Cannot find module 'postcss-preset-env'
+
+This happened because the PostCSS configuration referenced postcss-preset-env, but the package was not installed correctly.
+
+The lesson learned from this issue is that PostCSS only works when the required plugins are installed and properly configured. A PostCSS config file alone is not enough. Each plugin used inside postcss.config.js must also exist inside devDependencies.
+
+Current Responsive Styling Progress
+
+I started implementing a desktop-first CSS approach:
+
+Default CSS remains focused on the desktop layout.
+Mobile-specific changes are handled using media queries.
+The resume container was updated from a fixed width to a responsive width using width: 100% and max-width.
+The mobile layout will stack content into a single column.
+Social buttons, contact information, job headers, and certification rows will be adjusted for smaller screens.
