@@ -1,5 +1,24 @@
 @import './breakpoints';
 
+:root{
+  /* Fonts */
+  --font-body: Inter, sans-serif;
+  --font-heading: Inter, sans-serif;
+
+    /* Colors */
+  --primary: rgb(15, 39, 72);
+  --accent: rgb(37, 99, 235);
+  --text: rgb(31, 41, 55);
+  --muted: rgb(107, 114, 128);
+  --border: rgb(219, 226, 234);
+  --background: rgb(2, 6, 23);
+  --card-bg: rgb(255, 255, 255);
+ 
+    /* Layout */
+  --radius-card: 16px;
+  --shadow-card: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
 * {
     box-sizing:border-box;
     font-family: Inter, sans-serif;
@@ -12,8 +31,8 @@ html, body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    color: rgb(31, 41, 55);
-    background:rgb(2,6,23)
+    color: var(--text);
+    background:var(--background);
     
 }
 
@@ -38,7 +57,7 @@ main{
 
 /* Background */
 header{
-    background: rgb(2,6,23);
+    background:var(--background);
     flex-shrink: 1;
 }
 
@@ -56,7 +75,7 @@ nav{
 .logo{
     font-size:24px;
     font-weight:700;
-    color: rgb(255, 255, 255)
+    color: var(--card-bg)
 }
 
 /*Header Buttons display*/
@@ -89,7 +108,7 @@ article{
 div.content{
     width: 100%;
     max-width: 1400px;
-    background: rgb(255, 255, 255);
+    background: var(--card-bg);
     box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.5);
     padding: 40px;
     margin:auto; 
@@ -123,13 +142,13 @@ div.content{
 div.intro-section h1{
     font-family:'Merriweather',serif;
     font-size:3.5rem;
-    color:rgb(15, 39, 72);
+    color:var(--primary);
     line-height:1.2;
     margin-bottom:10px;
 } 
 /* Work Title*/
 div.intro-section h2{
-    color:rgb(15, 39, 72);
+    color:var(--primary);
     font-size:1.6rem;
     margin-bottom:10px;
     font-weight:600;
@@ -140,7 +159,7 @@ div.intro-section h2{
     flex-wrap:wrap;
     gap:35px;
     margin-bottom:2px;
-    color:rgb(107, 114, 128);
+    color:var(--muted);
 }
 /* Github, Linkedin, Resume button size*/
 .Social-Buttons{
@@ -151,7 +170,7 @@ div.intro-section h2{
 /* Github, Linkedin, Resume button name*/
 .Social-Buttons a{
     text-decoration:none;
-    background:rgb(15, 39, 72);
+    background:var(--primary);
     color:white;
     padding:12px 25px;
     border-radius:10px;
@@ -161,10 +180,10 @@ div.intro-section h2{
 /* Professional Summary Card*/
 .card h3{
     font-family:'Merriweather',serif;
-    color:rgb(15, 39, 72);
+    color:var(--primary);
     margin-bottom:20px;
     padding-bottom:10px;
-    border-bottom: 2px solid rgb(15, 39, 72);
+    border-bottom: 2px solid var(--primary);;
 }
 /* Separation between cards */
 .resume-grid {
@@ -196,13 +215,13 @@ div.intro-section h2{
 /* Visitor Count */
 .visitor-count{
     font-size: 3rem;
-    color:rgb(37, 99, 235);
+    color:var(--accent);;
     font-weight:800;
 }
 /* Visitor label */
 .visitor-label{
     text-align:center;
-    color:rgb(107, 114, 128);
+    color:var(--muted);
 }
 
 /* Each Card Details*/
@@ -258,14 +277,14 @@ div.intro-section h2{
 
 /*Degree Name*/
 .education h4{
-    color:rgb(15, 39, 72);
+    color:var(--primary);;
     font-size:1.05rem;
     font-weight:700;
     margin-bottom:6px;
 }
 
 .education-uni {
-    color:rgb(37, 99, 235);
+    color:var(--accent);;
     font-weight:600;
     margin-bottom:6px;
 }
@@ -348,6 +367,38 @@ div.intro-section h2{
 .security-icon{
     color:#0f2748;
 }
+
+/* Technical Skills Card */
+.skills-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 180px 12px 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.skill-label {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.skill-colon {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.skill-value {
+    color: var(--text);;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 
 /* Tablet and above */
 @media (--phone-only)  {
